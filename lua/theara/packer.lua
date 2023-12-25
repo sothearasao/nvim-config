@@ -74,28 +74,28 @@ return require('packer').startup(function(use)
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
 
-  use({
-      'nvim-neotest/neotest',
-      requires = {
-          'nvim-neotest/neotest-jest',
-          "nvim-lua/plenary.nvim",
-          "antoinemadec/FixCursorHold.nvim"
-      },
-      config = function()
-          require('neotest').setup({
-              adapters = {
-                  require('neotest-jest')({
-                      jestCommand = require('neotest-jest.jest-util').getJestCommand(vim.fn.expand '%:p:h') .. ' --watch',
-                      jestConfigFile = "custom.jest.config.ts",
-                      env = { CI = true },
-                      cwd = function(path)
-                          return vim.fn.getcwd()
-                      end,
-                  }),
-              }
-          })
-      end
-  })
+--   use({
+--       'nvim-neotest/neotest',
+--       requires = {
+--           'nvim-neotest/neotest-jest',
+--           "nvim-lua/plenary.nvim",
+--           "antoinemadec/FixCursorHold.nvim"
+--       },
+--       config = function()
+--           require('neotest').setup({
+--               adapters = {
+--                   require('neotest-jest')({
+--                       jestCommand = require('neotest-jest.jest-util').getJestCommand(vim.fn.expand '%:p:h') .. ' --watch',
+--                       jestConfigFile = "custom.jest.config.ts",
+--                       env = { CI = true },
+--                       cwd = function(path)
+--                           return vim.fn.getcwd()
+--                       end,
+--                   }),
+--               }
+--           })
+--       end
+--   })
 
   use 'mfussenegger/nvim-dap'
   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
