@@ -74,11 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["FixCursorHold.nvim"] = {
-    loaded = true,
-    path = "/home/theara/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
-    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
-  },
   LuaSnip = {
     loaded = true,
     path = "/home/theara/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -120,7 +115,7 @@ _G.packer_plugins = {
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["conform.nvim"] = {
-    config = { "\27LJ\2\n×\3\0\0\6\0\27\0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0034\4\3\0005\5\b\0>\5\1\4=\4\t\0034\4\3\0005\5\n\0>\5\1\4=\4\v\0034\4\3\0005\5\f\0>\5\1\4=\4\r\0034\4\3\0005\5\14\0>\5\1\4=\4\15\3=\3\17\0025\3\18\0=\3\19\2B\0\2\0016\0\20\0009\0\21\0009\0\22\0005\2\23\0'\3\24\0'\4\25\0005\5\26\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2-<cmd>lua require('conform').format()<cr>\15<leader>mp\1\3\0\0\6n\6v\bset\vkeymap\bvim\19format_on_save\1\0\2\15timeout_ms\3ô\3\17lsp_fallback\2\21formatters_by_ft\1\0\0\tyaml\1\2\0\0\rprettier\tjson\1\2\0\0\rprettier\15typescript\1\2\0\0\rprettier\15javascript\1\2\0\0\rprettier\vpython\1\3\0\0\nisort\nblack\blua\1\0\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0" },
+    config = { "\27LJ\2\n×\3\0\0\6\0\27\0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0034\4\3\0005\5\b\0>\5\1\4=\4\t\0034\4\3\0005\5\n\0>\5\1\4=\4\v\0034\4\3\0005\5\f\0>\5\1\4=\4\r\0034\4\3\0005\5\14\0>\5\1\4=\4\15\3=\3\17\0025\3\18\0=\3\19\2B\0\2\0016\0\20\0009\0\21\0009\0\22\0005\2\23\0'\3\24\0'\4\25\0005\5\26\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2-<cmd>lua require('conform').format()<cr>\15<leader>mp\1\3\0\0\6n\6v\bset\vkeymap\bvim\19format_on_save\1\0\2\17lsp_fallback\2\15timeout_ms\3ô\3\21formatters_by_ft\1\0\0\tyaml\1\2\0\0\rprettier\tjson\1\2\0\0\rprettier\15typescript\1\2\0\0\rprettier\15javascript\1\2\0\0\rprettier\vpython\1\3\0\0\nisort\nblack\blua\1\0\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0" },
     loaded = true,
     path = "/home/theara/.local/share/nvim/site/pack/packer/start/conform.nvim",
     url = "https://github.com/stevearc/conform.nvim"
@@ -129,6 +124,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/theara/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
+  },
+  ["diffview.nvim"] = {
+    loaded = true,
+    path = "/home/theara/.local/share/nvim/site/pack/packer/start/diffview.nvim",
+    url = "https://github.com/sindrets/diffview.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -159,17 +159,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/theara/.local/share/nvim/site/pack/packer/start/neodev.nvim",
     url = "https://github.com/folke/neodev.nvim"
-  },
-  neotest = {
-    config = { "\27LJ\2\n%\0\1\3\0\3\0\0046\1\0\0009\1\1\0019\1\2\1D\1\1\0\vgetcwd\afn\bvimÃ\2\1\0\f\0\19\1 6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\17\0004\3\3\0006\4\0\0'\6\3\0B\4\2\0025\6\v\0006\a\0\0'\t\4\0B\a\2\0029\a\5\a6\t\6\0009\t\a\t9\t\b\t'\v\t\0B\t\2\0A\a\0\2'\b\n\0&\a\b\a=\a\f\0065\a\r\0=\a\14\0063\a\15\0=\a\16\6B\4\2\0?\4\0\0=\3\18\2B\0\2\1K\0\1\0\radapters\1\0\0\bcwd\0\benv\1\0\1\aCI\2\16jestCommand\1\0\1\19jestConfigFile\26custom.jest.config.ts\r --watch\n%:p:h\vexpand\afn\bvim\19getJestCommand\27neotest-jest.jest-util\17neotest-jest\nsetup\fneotest\frequire\3€€À™\4\0" },
-    loaded = true,
-    path = "/home/theara/.local/share/nvim/site/pack/packer/start/neotest",
-    url = "https://github.com/nvim-neotest/neotest"
-  },
-  ["neotest-jest"] = {
-    loaded = true,
-    path = "/home/theara/.local/share/nvim/site/pack/packer/start/neotest-jest",
-    url = "https://github.com/nvim-neotest/neotest-jest"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -261,22 +250,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
-time([[Config for trouble.nvim]], false)
 -- Config for: conform.nvim
 time([[Config for conform.nvim]], true)
-try_loadstring("\27LJ\2\n×\3\0\0\6\0\27\0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0034\4\3\0005\5\b\0>\5\1\4=\4\t\0034\4\3\0005\5\n\0>\5\1\4=\4\v\0034\4\3\0005\5\f\0>\5\1\4=\4\r\0034\4\3\0005\5\14\0>\5\1\4=\4\15\3=\3\17\0025\3\18\0=\3\19\2B\0\2\0016\0\20\0009\0\21\0009\0\22\0005\2\23\0'\3\24\0'\4\25\0005\5\26\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\2-<cmd>lua require('conform').format()<cr>\15<leader>mp\1\3\0\0\6n\6v\bset\vkeymap\bvim\19format_on_save\1\0\2\15timeout_ms\3ô\3\17lsp_fallback\2\21formatters_by_ft\1\0\0\tyaml\1\2\0\0\rprettier\tjson\1\2\0\0\rprettier\15typescript\1\2\0\0\rprettier\15javascript\1\2\0\0\rprettier\vpython\1\3\0\0\nisort\nblack\blua\1\0\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0", "config", "conform.nvim")
+try_loadstring("\27LJ\2\n×\3\0\0\6\0\27\0'6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\16\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\0034\4\3\0005\5\b\0>\5\1\4=\4\t\0034\4\3\0005\5\n\0>\5\1\4=\4\v\0034\4\3\0005\5\f\0>\5\1\4=\4\r\0034\4\3\0005\5\14\0>\5\1\4=\4\15\3=\3\17\0025\3\18\0=\3\19\2B\0\2\0016\0\20\0009\0\21\0009\0\22\0005\2\23\0'\3\24\0'\4\25\0005\5\26\0B\0\5\1K\0\1\0\1\0\2\fnoremap\2\vsilent\2-<cmd>lua require('conform').format()<cr>\15<leader>mp\1\3\0\0\6n\6v\bset\vkeymap\bvim\19format_on_save\1\0\2\17lsp_fallback\2\15timeout_ms\3ô\3\21formatters_by_ft\1\0\0\tyaml\1\2\0\0\rprettier\tjson\1\2\0\0\rprettier\15typescript\1\2\0\0\rprettier\15javascript\1\2\0\0\rprettier\vpython\1\3\0\0\nisort\nblack\blua\1\0\0\1\2\0\0\vstylua\nsetup\fconform\frequire\0", "config", "conform.nvim")
 time([[Config for conform.nvim]], false)
--- Config for: neotest
-time([[Config for neotest]], true)
-try_loadstring("\27LJ\2\n%\0\1\3\0\3\0\0046\1\0\0009\1\1\0019\1\2\1D\1\1\0\vgetcwd\afn\bvimÃ\2\1\0\f\0\19\1 6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\17\0004\3\3\0006\4\0\0'\6\3\0B\4\2\0025\6\v\0006\a\0\0'\t\4\0B\a\2\0029\a\5\a6\t\6\0009\t\a\t9\t\b\t'\v\t\0B\t\2\0A\a\0\2'\b\n\0&\a\b\a=\a\f\0065\a\r\0=\a\14\0063\a\15\0=\a\16\6B\4\2\0?\4\0\0=\3\18\2B\0\2\1K\0\1\0\radapters\1\0\0\bcwd\0\benv\1\0\1\aCI\2\16jestCommand\1\0\1\19jestConfigFile\26custom.jest.config.ts\r --watch\n%:p:h\vexpand\afn\bvim\19getJestCommand\27neotest-jest.jest-util\17neotest-jest\nsetup\fneotest\frequire\3€€À™\4\0", "config", "neotest")
-time([[Config for neotest]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
